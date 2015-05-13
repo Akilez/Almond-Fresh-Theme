@@ -1,0 +1,271 @@
+// single
+.wrapper.single {
+  background-color: #fff;
+  padding: @grid-gutter-width /2;
+  //padding-top: 0; huh? breaks single product layout
+}
+body.single {
+  .products-trigger {
+    background-color: #fff;
+    color: #5e9d2e !important;
+  }
+  nav .products-trigger {
+    background-color: #fff;
+  }
+  .content-primary {
+    .make-sm-column(8, 50px);
+    .clearfix;
+    .image {
+      .make-sm-column(6);
+      .make-sm-column-push(6);
+      .make-xs-column(12);
+      overflow: visible;
+      position: relative;
+      z-index: 50;
+      .clearfix;
+      @media (max-width: @screen-xs) {
+        max-width: 50%;
+        margin: 0 auto;
+        display: block;
+        clear: both;
+        img {
+          margin-right: -15%;
+        }
+      }
+      @media (min-width: @screen-xs-max) and (max-width: @screen-sm-min) {
+        width: 50%;
+        float: right;
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      .nopad;
+    }
+  }
+  .content-secondary {
+    .make-sm-column(4);
+    .clearfix;
+  }
+  header.article .title {
+    @media (max-width: @screen-md-max) and (min-width: @screen-md-min) {
+      font-size: 40px;
+    }
+  }
+  .text {
+    .make-sm-column(12);
+    .make-md-column(6);
+    .make-md-column-pull(6);
+    .make-xs-column(12);
+    position: relative;
+    z-index: 51;
+    // @media (max-width: @screen-sm-min) {
+    //     width: 50%;
+    //     float: left;
+    // }
+  }
+  .format {
+    font-size: 20px;
+    @media (max-width: @screen-xs) {
+      text-align: center;
+      display: block;
+    }
+  }
+  .title {
+    font-size: 25px;
+    margin: (@grid-gutter-width/2) 0;
+  }
+  .description {
+    font-size: 21px;
+    color: #999999;
+  }
+  h2.ingredients, h3.ingredients, h4.ingredients {
+    font-size: 22px;
+  }
+  .image {
+    img {
+      max-width: 110%;
+      margin-left: -2%;
+    }
+    @media (max-width: @screen-md-min) {
+      width: 50%;
+      float: right;
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+    @media (max-width: @screen-sm-max) {
+      max-width: 100% !important;
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+    @media (max-width: @screen-sm-max) {
+      width: 100% !important;
+      left: 0 !important;
+      padding-top: 0;
+      img {
+        max-width: 75%;
+      }
+    }
+  }
+  .nutrition  {
+    .clearfix;
+    margin-top: @grid-gutter-width;
+    .title {
+      font-size: 20px;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+    .serving {
+      margin-bottom: @grid-gutter-width /2;
+      display: inline-block;
+    }
+    header, footer {
+      display: block;
+      padding: 0 (@grid-gutter-width /2);
+      hr {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid @gray-darker;
+      }
+    }
+    footer {
+      clear: both;
+    }
+    table {
+      width: 100%;
+      tr {
+        border-top: solid 1px #666666;
+        &:first-of-type {
+          border-top: 0;
+        }
+        &:nth-child(odd) {
+          background-color: lighten(@blue, 56%);
+        }
+        &.breakdown {
+          border-width: 1px;
+          .key {
+            text-align: left;
+            padding-left: 10%;
+            padding-right: 10px;
+          }
+        }
+        &.bold_text {
+          font-weight: bold;
+        }
+        &.bold_underline {
+          border-bottom: solid 1px #666;
+        }
+        td {
+          padding:2px 5px 4px;
+        }
+      }
+      @media (max-width: @screen-xs-max) {
+        margin-bottom: @grid-gutter-width;
+      }
+    }
+    .terms {
+      .make-xs-column(12);
+      margin-top: @grid-gutter-width;
+    }
+  }
+  // Sidebar
+  .content-secondary {
+    // sidebar headings
+    .heading {
+      font-size: 20px;
+      border-bottom: solid 1px @text-color;
+      padding-bottom: @grid-gutter-width /2;
+      margin-bottom: @grid-gutter-width;
+      @media (max-width: @screen-xs-max) {
+      }
+    }
+    //media object
+    .media {
+      text-align: center;
+      margin-bottom: @grid-gutter-width;
+      overflow: visible;
+      .clearfix;
+    }
+    .media-heading {
+      font-size: 18px;
+      margin-top: @grid-gutter-width /4;
+      @media (min-width: @screen-md-max) {
+        font-size: 25px;
+      }
+    }
+    .media-body {
+      text-align: left;
+    }
+    .btn {
+      display: inline-block;
+      @media (max-width: @screen-sm-max) {
+        margin-top: 10px;
+      }
+    }
+    .pull-left {
+      width: 40%;
+      margin-left: -5%;
+      margin-right: 0;
+      img {
+        //margin-left: -10%;
+        margin: 0 auto;
+      }
+      @media (min-width: @screen-sm) and (max-width: @screen-md-min) {
+      }
+      @media (min-width: @screen-md-max) {
+        max-width: 38%;
+      }
+    }
+    .media-body {
+      text-align: center;
+      @media (min-width: @screen-md-max) {
+        text-align: left;
+      }
+    }
+    .about {
+      display: none;
+      @media (min-width: @screen-md-max) {
+        display: block;
+      }
+      @media (max-width: @screen-xs-max) {
+        display: block;
+        text-align: left;
+      }
+    }
+    // image resizing for product sizes
+    .non-refrigerated {
+      img {
+        max-height: 135px;
+      }
+    }
+    .single-serve {
+      img {
+        max-height: 115px;
+      }
+    }
+    .fresh-soy {
+      img {
+        max-height: 200px;
+      }
+    }
+    .size {
+      font-size: 20px;
+      color: #999;
+      display: none;
+      @media (min-width: @screen-md) {
+        display: block;
+      }
+    }
+  }
+}
+html[lang="FR-fr"] {
+  .single table {
+    font-size: 14px;
+  }
+}

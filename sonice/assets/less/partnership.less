@@ -1,0 +1,256 @@
+
+// Partnership
+
+body.page-template-page-partnership-php, body.page-template-page-lifestyle-php {
+
+    section.intro {
+        @media (max-width: @screen-xs-max) {
+            padding-bottom: @grid-gutter-width /2;
+        }
+
+        .title img {
+            width: 100px;
+            margin-right: 10px;
+            margin-top: -25px;
+
+            @media (max-width: @screen-xs-max) {
+                display: block;
+                clear: both;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    section.content {
+
+        ul {
+            padding-top: 0;
+
+            @media (max-width: @screen-xs-max) {
+                padding: @grid-gutter-width;
+                padding-top: 0;
+            }
+        }
+
+        .title {
+            color: #63a938;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+
+            @media (max-width: @screen-md-min) {
+                font-size: 15px;
+            }
+        }
+
+        .media-body {
+            padding-left: 4%;
+
+            @media (max-width: @screen-xs-max) {
+                padding-left: 1%; //huh?
+            }
+        }
+
+        .pull-left {
+            width: 48%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('http://placehold.it/200/200');
+            padding-bottom: 50%;
+            margin: 0;
+
+            @media (max-width: @screen-xs-max) {
+                width: 100%;
+                padding-bottom: 100%;
+            }
+        }
+
+        li {
+            margin-bottom: @grid-gutter-width *2;
+
+            img {
+                width: 100%;
+            }
+
+            @media (max-width: @screen-xs-max) {
+                margin-bottom: @grid-gutter-width /2;
+            }
+        }
+
+        @media (min-width: @screen-sm-min) {
+
+            li:nth-child(odd) {
+                .pull-left {
+                    float: right !important;
+                }
+
+                .media-body {
+                    padding-left: 0;
+                    padding-right: 4%;
+                }
+            }
+
+        }
+
+        @media (max-width: @screen-xs-max) {
+            padding-top: 0;
+        }
+
+        .btn {
+            background-color: @green;
+            color: #fff;
+            margin-top: @grid-gutter-width /2;
+            margin-bottom: @grid-gutter-width /2;
+
+            &:hover {
+                background-color: lighten(@green, 5%);
+            }
+        }
+    }
+
+    .newsletter {
+        .make-sm-column(12);
+        padding: @grid-gutter-width;
+    }
+}
+
+// Targeting huge logos
+
+body.page-template-page-lifestyle-php {
+
+    li:last-of-type {
+        .pull-left {
+            background-size: 75%;
+        }
+    }
+}
+
+body.page-id-236, body.page-id-579 {
+
+    li:last-of-type {
+        padding-top: 0;
+
+        .media-body {
+            height: 375px !important;
+
+            > div {
+                margin-top: 0 !important;
+            }
+        }
+        .pull-left {
+            background-size: 60%;
+            height: 375px !important;
+            padding-bottom: inherit;
+            background-position: top;
+        }
+
+        @media (max-width: @screen-md-max) {
+            .pull-left, .media-body {
+                height: 400px !important;
+            }
+
+            .pull-left {
+                background-size: 100%;
+            }
+        }
+
+        @media (max-width: @screen-xs-max) {
+            .pull-left, .media-body {
+                height: auto !important;
+            }
+
+            .pull-left {
+                height: 500px !important;
+            }
+        }
+
+        @media (max-width: @screen-xs-min) {
+            .pull-left, .media-body {
+                height: auto !important;
+            }
+
+            .pull-left {
+                height: 375px !important;
+            }
+        }
+    }
+
+    .media .title {
+        color: #437552 !important;
+    }
+
+    .media a {
+        color: #63a938;
+    }
+}
+
+body.page-id-47, body.page-id-580 {
+
+    li:last-of-type {
+        padding-top: 0;
+
+        .media-body {
+            height: 275px !important;
+
+
+
+        }
+        .pull-left {
+            background-size: 75%;
+            height: 300px !important;
+            padding-bottom: inherit;
+            background-position: center;
+        }
+
+        @media (max-width: @screen-md-max) {
+            .pull-left, .media-body {
+                height: 300px !important;
+            }
+
+            .pull-left {
+                background-size: 85%;
+                background-position: top;
+                height: 340px !important;
+            }
+        }
+
+        @media (max-width: @screen-md-min) {
+            .pull-left, .media-body {
+                height: 300px !important;
+            }
+
+            .pull-left {
+                background-size: 85%;
+                background-position: top;
+                height: 290px !important;
+            }
+        }
+
+        @media (max-width: @screen-xs-max) {
+            .pull-left, .media-body {
+                height: auto !important;
+            }
+
+            .pull-left {
+                height: 370px !important;
+                background-size: 70%;
+                background-position: bottom;
+            }
+        }
+
+        @media (max-width: @screen-xs-min) {
+            .pull-left, .media-body {
+                height: auto !important;
+            }
+
+            .pull-left {
+                height: 300px !important;
+                background-size: 85%;
+            }
+        }
+    }
+}
+

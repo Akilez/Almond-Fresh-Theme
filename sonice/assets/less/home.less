@@ -1,0 +1,187 @@
+// home.less
+body.home {
+  header.banner {
+    background-color: #fff;
+  }
+  .container.hero {
+    max-width: 100%;
+    .nopad;
+  }
+  .carousel-indicators {
+    left: 46%;
+    bottom: @grid-gutter-width;
+    @media (max-width: @screen-sm-max) {
+      left: auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+    @media (max-width: @screen-md-max) {
+      bottom: @grid-gutter-width /2;
+    }
+  }
+  .hero-overlay {
+    background: url('/wp-content/themes/sonice/assets/img/hero-overlay.png');
+    background-poisition: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 370px;
+    height: 205px;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    left: -60px;
+    display: none;
+  }
+  .hero {
+    position: relative;
+    color: #fff;
+    .container {
+      padding: 0;
+    }
+    .btn {
+      background-color: #fff;
+      color: @green;
+      &:hover {
+        background-color: darken(#f2f2f2, 5%);
+      }
+    }
+  }
+  .sidebar {
+    z-index: 1000;
+    right: 0;
+    .make-sm-column(3.65);
+    .make-sm-column-offset(8);
+    padding: @grid-gutter-width /4;
+    height: 100%;
+    position: absolute;
+    @media (max-width: @screen-sm-max) {
+      display: none;
+    }
+    a {
+      max-width: 100%;
+      background-repeat: no-repeat;
+      display: block;
+      margin-bottom: @grid-gutter-width /8;
+      background-size: cover;
+      position: relative;
+      text-align: center;
+      -webkit-box-shadow: 0px 0px 15px #222;
+      -moz-box-shadow: 0px 0px 15px #222;
+      -ms-box-shadow: 0px 0px 15px #222;
+      -o-box-shadow: 0px 0px 15px #222;
+      box-shadow: 0px 0px 15px #222;
+      -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,.5);
+      @media (max-width: @screen-md-max) {
+        margin-bottom: 10px;
+      }
+      &:last-of-type {
+        margin-top: 4px;
+      }
+    }
+    .title {
+      position: absolute;
+      font-family: @font-family-sans-serif;
+      bottom: 30%;
+      font-size: 23px;
+      color: #fff;
+      padding-left: 20%;
+      padding-right: 20%;
+      line-height: 1em;
+      text-shadow: 0px 0px 5px #000;
+    }
+    .btn {
+      padding-bottom: 5px;
+      margin-top: 60%;
+      font-size: 10px;
+      margin-bottom: 4%;
+      @media (max-width: @screen-md-max) {
+        margin-top: 55%;
+        margin-bottom: 7%;
+      }
+    }
+  }
+  .carousel-control {
+    display: none !important;
+  }
+  .item {
+    min-height: 495px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    .clearfix;
+    .text {
+      .make-sm-column(8);
+      .make-sm-column-offset(4);
+      .make-md-column(6);
+      .make-md-column-offset(2.50);
+      text-align: center;
+      padding-top: 115px;
+      @media (max-width: @screen-xs) {
+        padding-top: 75px;
+      }
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1em;
+      margin-top: @grid-gutter-width /2;
+      margin-bottom: @grid-gutter-width /2;
+      font-family: @font-family-sans-serif;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      @media (max-width: @screen-md-max) {
+        font-size: 40px;
+      }
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 0;
+      @media (max-width: @screen-md-max) {
+        font-size: 15px;
+      }
+    }
+    .btn {
+      margin-top: @grid-gutter-width;
+      padding-bottom: 6px;
+      margin-top: 3%;
+    }
+    @media (max-width: @screen-md-max) {
+      min-height: 408px;
+    }
+    br {
+      .hidden-xs;
+    }
+    // INDIVIDUAL CAROUSEL ITEM STYLES HERE
+    &.one {
+      @media (min-width: @screen-md) {
+        .text {
+          padding-top: 155px;
+        }
+      }
+    }
+    &.one, &.two {
+      @media (max-width: @screen-sm) {
+        background-position: left !important;
+      }
+    }
+    &.two {
+      @media (max-width: @screen-xs-max) {
+        background-position-x: left !important;
+      }
+    }
+    &.three {
+      background-position-y: 75%;
+      @media (min-width: @screen-sm-min) {
+        background-position-x: left;
+      }
+      @media (max-width: @screen-xs-max) {
+        background-position-x: left;
+      }
+    }
+  }
+  .newsletter {
+    @media (min-width: @screen-sm) {
+      min-height: 355px;
+    }
+  }
+}

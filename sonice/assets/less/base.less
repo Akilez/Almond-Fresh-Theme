@@ -1,0 +1,171 @@
+// base.less
+body {
+  font-family: @font-family-sans-serif;
+  font-size: 15px;
+}
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: @font-family-sans-serif;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  background-color: inherit;
+}
+.title {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .clearfix;
+}
+li {
+  &:last-of-type {
+    margin-bottom: 0 !important; // why choose
+  }
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, header.main #menu-primary-navigation li a:hover, header.main #menu-primary-navigation li a.is-on {
+  background-color: #fff;
+  border-radius: 0;
+}
+.nav-pills a {
+  border-radius: 0;
+}
+.btn {
+  border-radius: 40px;
+  padding-top: 8px;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding-left: @grid-gutter-width;
+  padding-right: @grid-gutter-width;
+  text-transform: uppercase;
+  font-family: "DIN Medium", Arial;
+  &.dark {
+    background-color: @green;
+    color: #fff;
+    &:hover {
+      background-color: lighten(@green, 5%);
+    }
+  }
+}
+section.products {
+  overflow: hidden;
+  margin: (@grid-gutter-width *2) 0 (@grid-gutter-width *2) 0;
+  .media {
+    margin: @grid-gutter-width 0;
+  }
+  .title {
+    display: block;
+    .clearfix;
+  }
+  span {
+    display: block;
+  }
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+  outline: none;
+}
+a:focus {
+  outline: none;
+}
+input[type="text"], input[type="email"] {
+  height: 40px;
+  font-family: Arial;
+}
+.carousel-control {
+  background-image: none !important;
+}
+.carousel-indicators {
+  bottom: 0;
+  li {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    margin: 0 2px 0 2px;
+    &.active {
+      background-color: #60a334;
+      margin: 0 2px 0 2px;
+      border-color: blue;
+      width: 18px;
+      height: 18px;
+      border: solid 3px #fff;
+      margin-bottom: .5px;
+    }
+  }
+}
+a, a::-moz-focus-inner {
+  outline: 0 !important;
+}
+.form-group {
+  padding-top: @grid-gutter-width /4;
+  padding-bottom: @grid-gutter-width /4;
+}
+.error404 {
+  section {
+    padding-top: @grid-gutter-width;
+  }
+}
+.stButton {
+  display: none !important;
+}
+.flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  .third {
+    -webkit-flex: 0 1 33%;
+    -moz-flex: 0 1 33%;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;
+    @media (max-width: 840px) {
+      -webkit-flex: 0 1 49%;
+      -moz-flex: 0 1 49%;
+      -ms-flex: 0 1 49%;
+      flex: 0 1 49%;
+    }
+    @media (max-width: 580px) {
+      -webkit-flex: 0 1 100%;
+      -moz-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+    }
+  }
+  .half {
+    -webkit-flex: 0 1 50%;
+    -moz-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+  .col-space-between {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    flex-direction: column;
+    -ms-flex-preferred-size: 47%;
+
+    .btn {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}

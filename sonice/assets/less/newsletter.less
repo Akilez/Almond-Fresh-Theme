@@ -1,0 +1,123 @@
+// Newsletter
+
+body.page-template-page-newsletter-php {
+
+
+    .intro {
+        padding-top: @grid-gutter-width *2;
+
+        strong {
+            color: #666666;
+        }
+
+        .terms {
+            font-size: 15px;
+            display: block;
+            clear: both;
+            color: #999999;
+            font-family: arial, sans-serif;
+            font-weight: normal;
+            margin-top: 5px;
+
+            a {
+                color: @text-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .title {
+        color: @green-light;
+
+
+    }
+
+    form {
+        clear: both;
+        text-align: center;
+        display: block;
+        .clearfix;
+
+        .make-sm-column(6);
+        .make-sm-column-push(3);
+
+
+        label {
+            font-size: 20px;
+            position: relative;
+            display: block;
+
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            display: inline-block;
+            font-size: 15px;
+            color: #999999;
+            font-family: arial, sans-serif;
+            font-weight: normal;
+            line-height: 30px;
+
+        }
+
+        input {
+            text-align: center;
+        }
+
+        .math input {
+            max-width: 100px;
+            margin: 0 auto;
+        }
+    }
+
+    button {
+        clear: both;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .checkbox {
+        display: inline-block;
+        text-align: center;
+        clear: both;
+        float: none;
+
+        input {
+            margin-top: 8px;
+        }
+    }
+
+    label {
+        display: inline-block;
+    }
+
+    .check {
+        font-size: 15px;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+
+    }
+
+    p a {
+        color: inherit;
+        text-decoration: underline;
+
+    }
+
+    .parsley-errors-list {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: @brand-danger;
+    }
+
+    div.checkbox .parsley-errors-list {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    label.parsley-error {
+        display: inline-block;
+
+    }
+}

@@ -1,0 +1,49 @@
+// privacy.less
+
+body.page-template-page-privacy-php {
+
+    .title {
+        color: #63a938;
+        font-size: 65px;
+
+        @media (max-width: @screen-xs-max) {
+            font-size: 40px;
+        }
+    }
+
+    section.intro {
+        padding-top: @grid-gutter-width *2;
+
+        p {
+            font-size: 25px;
+            color: #666666;
+            line-height: 1.2em;
+            margin-bottom: 0;
+
+            @media (max-width: @screen-xs-max) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    section.privacy {
+        padding: 0 @grid-gutter-width @grid-gutter-width @grid-gutter-width;
+        font-size: 20px;
+
+        .col1, .col2 {
+            .make-xs-column(12, 0);
+            .make-sm-column(6);
+        }
+
+        p {
+            margin-bottom: @grid-gutter-width;
+        }
+
+        @media (max-width: @screen-xs-max) {
+            padding: 0;
+        }
+    }
+
+}
+
+
