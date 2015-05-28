@@ -4,120 +4,119 @@ section.intro {
 }
 section.recipes {
   .clearfix;
-  ul.nav {
-    display: block;
-    margin: 0 auto;
-    //margin-bottom: @grid-gutter-width /2;
-    text-align: center;
-    li {
-      display: inline-block;
-      margin: @grid-gutter-width /4;
-      &.active {
-        a {
-          color: #666666;
-          background-color: #cccccc;
-        }
-        .triangle {
-          opacity: 1;
-          margin-top: 0;
-          z-index: 1;
-          position: relative;
-        }
-      }
-      .triangle {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 15px 12.5px 0 12.5px;
-        border-color: #cccccc transparent transparent transparent;
-        margin: 0 auto;
-        opacity: 0;
-        margin-top: -15px;
-        -webkit-transition: margin-top .25s ease-in-out;
-        -moz-transition: margin-top .25s ease-in-out;
-        -ms-transition: margin-top .25s ease-in-out;
-        -o-transition: margin-top .25s ease-in-out;
-        transition: margin-top .25s ease-in-out;
-      }
-    }
-    a {
-      .btn;
-      background-color: @green;
-      color: #fff;
-      font-size: 13px;
-      padding-bottom: 5px;
-      font-family: "DIN Regular";
-      position: relative;
-      z-index: 2;
-      &:hover {
-        color: #fff;
-        background-color: lighten(@green, 5%);
-      }
-    }
-  }
   ul {
     .clearfix;
-  }
-  ul.recipes li {
     display: block;
-    width: 20%;
-    //margin-bottom: @grid-gutter-width /2;
-    float: left;
-    @media (max-width: @screen-sm-max) {
-      width: 33%;
-    }
-    @media (max-width: @screen-xs) {
-      width: 50%;
-    }
-    .wrap {
-      padding: @grid-gutter-width /2;
-      padding-bottom: @grid-gutter-width;
-      display: block;
-      // -webkit-transition: all .25s ease-in-out;
-      //   -moz-transition: all .25s ease-in-out;
-      //   -o-transition: all .25s ease-in-out;
-      //   transition: all .25s ease-in-out;
-    }
-    .title {
-      display: block;
-      margin-bottom: @grid-gutter-width /2;
-      font-size: 20px;
-      font-family: @font-family-sans-serif;
-      color: @text-color;
-      position: relative;
+    &.nav {
+      margin: 0 auto;
+      //margin-bottom: @grid-gutter-width /2;
       text-align: center;
-      //min-height: 3em !important;
-      max-height: 50em;
-      display: flex;
-      -webkit-transition: max-height 1s;
-      -moz-transition: max-height 1s;
-      -ms-transition: max-height 1s;
-      -o-transition: max-height 1s;
-      transition: max-height 1s;
-      // -webkit-transition: all .25s ease-in-out;
-      //   -moz-transition: all .25s ease-in-out;
-      //   -o-transition: all .25s ease-in-out;
-      //   transition: all .25s ease-in-out;
-      span {
+      li {
         display: inline-block;
-        display: table-cell;
-        vertical-align: bottom;
-        .clearfix;
-        -webkit-transition: margin-top .5s;
-        -moz-transition: margin-top .5s;
-        -ms-transition: margin-top .5s;
-        -o-transition: margin-top .5s;
-        transition: margin-top .5s;
-        flex: 1 1 100%;
+        margin: @grid-gutter-width /4;
+        &.active {
+          a {
+            color: #666666;
+            background-color: #cccccc;
+          }
+          .triangle {
+            opacity: 1;
+            margin-top: 0;
+            z-index: 1;
+            position: relative;
+          }
+        }
+        .triangle {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 15px 12.5px 0 12.5px;
+          border-color: #cccccc transparent transparent transparent;
+          margin: 0 auto;
+          opacity: 0;
+          margin-top: -15px;
+          -webkit-transition: margin-top .25s ease-in-out;
+          -moz-transition: margin-top .25s ease-in-out;
+          -ms-transition: margin-top .25s ease-in-out;
+          -o-transition: margin-top .25s ease-in-out;
+          transition: margin-top .25s ease-in-out;
+        }
+      }
+      a {
+        .btn;
+        background-color: @blue;
+        color: #fff;
+        font-size: 13px;
+        padding-bottom: 5px;
+        font-family: "DIN Regular";
+        position: relative;
+        z-index: 2;
+        &:hover {
+          color: #fff;
+          background-color: lighten(@blue, 5%);
+        }
       }
     }
-    .image {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: block;
-      padding-bottom: 100%;
-      margin-top: @grid-gutter-width /2;
+    &.recipes li {
+      width: 20%;
+      //margin-bottom: @grid-gutter-width /2;
+      float: left;
+      @media (max-width: @screen-sm-max) {
+        width: 33%;
+      }
+      @media (max-width: @screen-xs) {
+        width: 50%;
+      }
+      .wrap {
+        padding: @grid-gutter-width /2;
+        padding-bottom: @grid-gutter-width;
+        display: block;
+        // -webkit-transition: all .25s ease-in-out;
+        //   -moz-transition: all .25s ease-in-out;
+        //   -o-transition: all .25s ease-in-out;
+        //   transition: all .25s ease-in-out;
+      }
+      .title {
+        display: block;
+        margin-bottom: @grid-gutter-width /2;
+        font-size: 15px;
+        font-family: @font-family-sans-serif;
+        color: @text-color;
+        position: relative;
+        text-align: center;
+        //min-height: 3em !important;
+        max-height: 50em;
+        display: flex;
+        -webkit-transition: max-height 1s;
+        -moz-transition: max-height 1s;
+        -ms-transition: max-height 1s;
+        -o-transition: max-height 1s;
+        transition: max-height 1s;
+        // -webkit-transition: all .25s ease-in-out;
+        //   -moz-transition: all .25s ease-in-out;
+        //   -o-transition: all .25s ease-in-out;
+        //   transition: all .25s ease-in-out;
+        span {
+          display: inline-block;
+          display: table-cell;
+          vertical-align: bottom;
+          .clearfix;
+          -webkit-transition: margin-top .5s;
+          -moz-transition: margin-top .5s;
+          -ms-transition: margin-top .5s;
+          -o-transition: margin-top .5s;
+          transition: margin-top .5s;
+          flex: 1 1 100%;
+        }
+      }
+      .image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        padding-bottom: 100%;
+        margin-top: @grid-gutter-width /2;
+      }
     }
   }
 }
@@ -147,6 +146,7 @@ body.single-recipe {
   div.image {
     padding-bottom: 400px;
     background-size: cover;
+    background-position: center;
     width: 45%;
     float: right;
     clear: none;

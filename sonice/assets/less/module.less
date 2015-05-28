@@ -8,7 +8,7 @@
 }
 .widget {
 	&.healthyliving, &.newsletter {
-		.clearfix();
+		.clearfix;
 		@media (max-width: @screen-xs-max) {
 			padding: @grid-gutter-width (@grid-gutter-width /2) !important;
 		}
@@ -44,10 +44,10 @@
 		}
 		.btn {
 			color: #fff;
-			background-color: @green;
+			background-color: @blue;
 			margin-top: 0;
 			&:hover {
-				background-color: lighten(@green, 5%);
+				background-color: lighten(@blue, 5%);
 			}
 			// @media (min-width: @screen-sm) {
 			//     margin-bottom: -50px;
@@ -221,7 +221,7 @@
 	}
 	.title {
 		font-size: 17px;
-		color: @green;
+		color: @blue;
 		text-align: center;
 		padding-top: 40px;
 		@media (max-width: @screen-md-min) {
@@ -261,7 +261,7 @@
 	padding-top: 0; //@grid-gutter-width /2;
 	padding-bottom: @grid-gutter-width /1.5;
 	.btn {
-		background-color: @green;
+		background-color: @blue;
 		font-weight: 200;
 		padding: 8px 5px 4px 5px;
 		color: #fff;
@@ -269,7 +269,7 @@
 		margin-left: 5px;
 		width: 130px;
 		&:hover {
-			background-color: lighten(@green, 5%);
+			background-color: lighten(@blue, 5%);
 		}
 	}
 	.print {

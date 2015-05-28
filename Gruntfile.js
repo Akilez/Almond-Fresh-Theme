@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: "sonice/**/*.less",
-        tasks: ["less:production"]
+        tasks: ["less:development"]
       },
       configFiles: {
         // Watch the Gruntfile for changes, at least while still in development
@@ -50,7 +50,8 @@ module.exports = function(grunt) {
         flatten: true,
         //uses a globbing pattern instead of reading a single file
         expand: true,
-        src: "sonice/**/*.css",
+        src: "sonice/assets/css/*.css",
+        dest: "sonice/assets/css",
       }
     },
     less: {

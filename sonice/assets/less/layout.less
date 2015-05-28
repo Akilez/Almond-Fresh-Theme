@@ -1,27 +1,5 @@
 // layout.less
 
-body {
-	background-color: #fff;
-}
-
-.container {
-
-    max-width: 100%; // this might be weird.
-
-    &.content {
-
-        background-color: #fff !important;
-        .clearfix;
-        padding: (@grid-gutter-width /1.25) (@grid-gutter-width) (@grid-gutter-width *2) (@grid-gutter-width);
-
-        min-height: 100px;
-    }
-
-    @media (max-width: @screen-xs-max) {
-        .nopad;
-    }
-}
-
 .wrap, .wrapper, .container, .section, .widget, footer, ul {
     .clearfix;
 }
