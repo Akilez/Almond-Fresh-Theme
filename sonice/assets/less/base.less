@@ -162,7 +162,12 @@ a, a::-moz-focus-inner {
     flex-direction: column;
     flex-direction: column;
     -ms-flex-preferred-size: 47%;
-
+    @media (max-width: @screen-sm) {
+      -webkit-justify-content: inherit;
+      -moz-justify-content: inherit;
+      -ms-justify-content: inherit;
+      justify-content: inherit;
+    }
     .btn {
       padding-left: 5px;
       padding-right: 5px;

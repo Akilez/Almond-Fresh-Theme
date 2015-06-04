@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 
-  <div class="wrapper single">
+  <div class="container">
 
     <article <?php post_class(); ?>>
 
@@ -149,7 +149,7 @@ BLOCK;
     endif;
   wp_reset_postdata();?>
 </section>
-<section class="cta">
+<section class="container">
   <?php include('inc-newsletter.php'); ?>
 </section>
 <?php endwhile; ?>

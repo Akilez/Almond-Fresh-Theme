@@ -69,35 +69,35 @@
         </div>
 
     </section>
+    <section class="products">
+        <?php
+
+    $myposts = get_field('featured_products');
+    if ($myposts) {
+      foreach ( $myposts as $post ) : setup_postdata( $post );
+              $format = get_field('format', $post->ID);
+              $body = get_field('teaser', $post->ID);
+              $image = get_field('image', $post->ID);
+              $imgsrc = wp_get_attachment_image_src( $image, 'medium'); ?>
+              <div class="media col-md-4">
+                <div class="media-left col-md-6 col-sm-4 col-xs-4">
+                  <a href="<?php the_permalink(); ?>">
+                    <img class="media-object img-responsive" src="<?php echo $imgsrc[0]; ?>" width="<?php echo $imgsrc[1]; ?>" height="<?php echo $imgsrc[2]; ?>" alt="<?php the_title(); ?>">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h2 class="media-heading"><?php echo $format; ?></h2>
+                  <?php echo $body; ?>
+                </div>
+              </div>
+      <?php endforeach;
+    }
+    wp_reset_postdata();?>
+    </section>
 
 </div>
 
-<section class="products">
-    <?php
-
-$myposts = get_field('featured_products');
-if ($myposts) {
-  foreach ( $myposts as $post ) : setup_postdata( $post );
-          $format = get_field('format', $post->ID);
-          $body = get_field('teaser', $post->ID);
-          $image = get_field('image', $post->ID);
-          $imgsrc = wp_get_attachment_image_src( $image, 'medium'); ?>
-          <div class="media col-md-4">
-            <div class="media-left col-md-6 col-sm-4 col-xs-4">
-              <a href="<?php the_permalink(); ?>">
-                <img class="media-object img-responsive" src="<?php echo $imgsrc[0]; ?>" width="<?php echo $imgsrc[1]; ?>" height="<?php echo $imgsrc[2]; ?>" alt="<?php the_title(); ?>">
-              </a>
-            </div>
-            <div class="media-body">
-              <h2 class="media-heading"><?php echo $format; ?></h2>
-              <?php echo $body; ?>
-            </div>
-          </div>
-  <?php endforeach;
-}
-wp_reset_postdata();?>
-</section>
-<section class="cta">
+<section class="container cta">
   <div class="row" style="margin: 0px 30px 60px;">
     <h2 class="title">
       <span class="col-md-7 text-right"><?php echo get_field('call_to_action'); ?></span>

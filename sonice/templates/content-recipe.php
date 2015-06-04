@@ -127,5 +127,6 @@ BLOCK;
       <div class="image" style="background-image: url('http://placehold.it/632x949');"></div>
     <?php } ?>
 </div>
-
-<?php include('inc-newsletter.php'); ?>
+<div class="container">
+  <?php include('inc-newsletter.php'); ?>
+</div>

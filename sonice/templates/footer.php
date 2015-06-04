@@ -1,4 +1,4 @@
-<footer class="main">
+<footer class="container main">
   <div class="col-md-2">
     <ul class="social">
       <li class="facebook"><a href="https://www.facebook.com/almondfresh" target="_blank"><i class="icon-facebook"></i></a></li>

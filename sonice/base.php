@@ -21,9 +21,7 @@
       }
     ?>
 
-    <div class="container main">
-
-        <div class="wrapper">
+    <div class="main">
 
             <?php include roots_template_path(); ?>
 
@@ -34,8 +32,6 @@
             <?php endif; ?>
 
             <?php get_template_part('templates/footer'); ?>
-
-        </div>
 
     </div>
 

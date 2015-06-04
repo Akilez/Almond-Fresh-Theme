@@ -2,7 +2,7 @@
 
     <?php include('inc-share.php'); ?>
 
-    <section class="intro"> 
+    <section class="intro">
 
         <h2 class="title text-primary"><?php _e('Almond Fresh Recipes', 'sonice'); ?></h2>
 
@@ -96,6 +96,6 @@ BLOCK;
     </section>
 
 </div>
-<section class="cta">
+<section class="container">
   <?php include('inc-newsletter.php'); ?>
 </section>
