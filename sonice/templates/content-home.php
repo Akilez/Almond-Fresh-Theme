@@ -17,11 +17,11 @@
 
         <div class="sidebar">
             <a href="<?php echo get_field('feature_1_link'); ?>" class="feature1" style="background-image: url('<?php $image = get_field("feature_1_image", $post->ID); echo $image["url"]; ?>')">
-                <p class="title"><?php echo get_field('feature_1_text'); ?></p>
+                <p class="title" style="color:<?php echo get_field('feature_1_text_color'); ?>; text-shadow: 0px 0px 5px <?php echo get_field('feature_1_text_shadow'); ?>; <?php echo get_field('feature_1_extra_css'); ?>"><?php echo get_field('feature_1_text'); ?></p>
                 <span class="btn btn-primary"><?php echo get_field('feature_1_button_label'); ?></span>
             </a>
             <a href="<?php echo get_field('feature_2_link'); ?>" class="feature2" style="background-image: url('<?php $image = get_field("feature_2_image", $post->ID); echo $image["url"]; ?>')">
-                <p class="title"><?php echo get_field('feature_2_text'); ?></p>
+                <p class="title" style="color:<?php echo get_field('feature_2_text_color'); ?>; text-shadow: 0px 0px 5px <?php echo get_field('feature_2_text_shadow'); ?>; <?php echo get_field('feature_2_extra_css'); ?>"><?php echo get_field('feature_2_text'); ?></p>
                 <span class="btn btn-primary"><?php echo get_field('feature_2_button_label'); ?></span>
             </a>
         </div>
@@ -107,9 +107,22 @@ wp_reset_postdata();?>
   <div class="col-md-6 nopad">
     <div class="widget healthyliving">
       <div class="wrap">
-        <h2 class="title"><?php _e('The Goodness of Almonds', 'sonice'); ?></h2>
-        <p><?php _e('nutrient dense whole food', 'sonice'); ?></p>
-        <a href="/healthy-lifestyle/" class="btn"><?php _e('Read on', 'sonice'); ?></a>
+        <?php
+          if (ICL_LANGUAGE_CODE == 'fr') {
+            $feat_title = 'Qualité des amandes';
+            $feat_sub = 'la valeur nutritive de l\'amande';
+            $feat_link = 'http://dev.almond-fresh.com/fr/qualite-des-amandes/';
+            $feat_link_text = 'Read on';
+          } else {
+            $feat_title = 'The Goodness of Almonds';
+            $feat_sub = 'nutrient dense whole food';
+            $feat_link = 'http://dev.almond-fresh.com/goodness-of-almonds/';
+            $feat_link_text = 'Read on';
+          }
+        ?>
+        <h2 class="title"><?php _e($feat_title, 'sonice'); ?></h2>
+        <p><?php _e($feat_sub, 'sonice'); ?></p>
+        <a href="<?php _e($feat_link, 'sonice'); ?>" class="btn"><?php _e($feat_link_text, 'sonice'); ?></a>
       </div>
     </div>
   </div>

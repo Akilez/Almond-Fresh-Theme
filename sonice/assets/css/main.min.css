@@ -7129,6 +7129,7 @@ section:after {
   text-align: right;
   padding-top: 0;
   padding-bottom: 20px;
+  margin-top: 30px;
 }
 .sharebanner .btn {
   background-color: #166bb1;
@@ -7303,10 +7304,12 @@ body.home .sidebar .title {
   bottom: 30%;
   font-size: 23px;
   color: #fff;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   line-height: 1em;
   text-shadow: 0px 0px 5px #000;
+  text-align: center;
+  width: 100%;
 }
 body.home .sidebar .btn {
   padding-bottom: 5px;
