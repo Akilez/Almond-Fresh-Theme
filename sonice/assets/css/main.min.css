@@ -6254,10 +6254,6 @@ a::-moz-focus-inner {
             justify-content: inherit;
   }
 }
-.flex .col-space-between .btn {
-  padding-left: 5px;
-  padding-right: 5px;
-}
 @font-face {
   font-family: "HelveticaNeueLight";
   src: url("/wp-content/themes/sonice/assets/fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix");
@@ -8224,15 +8220,15 @@ body.page-template-page-products-php section.products li {
 }
 body.page-template-page-products-php section.products .btn {
   margin-top: 15px;
-  display: inline-block;
+  display: inline-table;
   background-color: #166bb1;
 }
 body.page-template-page-products-php section.products .btn:hover {
   background-color: #1979c8;
 }
-@media (min-width: 768px) and (max-width: 889px) {
+@media (max-width: 768px) {
   body.page-template-page-products-php section.products .btn {
-    margin-top: 0;
+    padding: 6px 12px;
   }
 }
 @media (max-width: 767px) {
