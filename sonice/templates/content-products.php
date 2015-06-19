@@ -42,57 +42,6 @@
   <?php endforeach;
   wp_reset_postdata();?>
 
-  <?php
-
-  $args = array(
-    'post_type'        => 'products',
-    'post_status'      => 'publish',
-    'suppress_filters' => 0,
-    'orderby'          => 'post_date',
-    'order'            => 'ASC');
-
-    $posts = get_posts($args);
-    $ptblock = null;
-
-    foreach ( $posts  as $single_post ) {
-
-      $title = $single_post->post_title;
-      ICL_LANGUAGE_CODE == 'fr' ? $link = '/fr/' : $link = '/';
-      $link .= $current_post_type . "/" . $single_post->post_name;
-      $image = get_field('image', $single_post->ID);
-      $about = get_field('about', $single_post->ID);
-
-      $size = get_field('size', $single_post->ID);
-
-      if ((ICL_LANGUAGE_CODE == 'fr') && ($size == '1.89 L')) {
-        $size = '1, 89 L';
-      } else if ((ICL_LANGUAGE_CODE == 'fr') && ($size == '1.75 L')) {
-        $size = '1, 75 L';
-      }
-
-      $color = get_field(get_field('flavour', $single_post->ID), 'options');
-      $btn_label = __('Details', 'sonice');
-
-      $ptblock .= <<<BLOCK
-
-                <li class="large">
-                    <a class="wrap" href="{$link}">
-                        <span class="title" style="color: {$color};">{$title}</span>
-                        <span class="size">{$size}</span>
-                        <img src="{$image['sizes']['thumbnail-large']}" alt="">
-                        <p class="about">{$about}</p>
-                    </a>
-
-                    <a href="{$link}" class="btn" style="color: {$color};">{$btn_label}</a>
-                </li>
-BLOCK;
-    }
-    ?>
-
-    <ul class="product-listing">
-      <?php echo $ptblock; ?>
-    </ul>
-
   </section>
 </div>
 <div class="container">

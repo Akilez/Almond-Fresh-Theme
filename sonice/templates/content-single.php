@@ -117,7 +117,7 @@ BLOCK;
             </footer>
           </div>
         </div>
-        <div class="media-right col-md-4 hidden-xs">
+        <div class="media-right page-header col-md-4 hidden-xs">
           <a href="<?php the_permalink(); ?>">
             <img class="media-object img-responsive" src="<?php echo $imgsrc[0]; ?>" width="<?php echo $imgsrc[1]; ?>" height="<?php echo $imgsrc[2]; ?>" alt="<?php the_title(); ?>">
           </a>
@@ -125,7 +125,7 @@ BLOCK;
       </div>
     </article>
   </div>
-  <section class="products">
+  <section class="container products">
     <?php
     $myposts = get_field('other_sizes');
     if ($myposts) :

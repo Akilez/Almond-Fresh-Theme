@@ -32,7 +32,7 @@
            'post_type'        => 'recipe',
            'post_status'      => 'publish',
            'suppress_filters' => 0,
-           'orderby'          => 'post_date',
+           'orderby'          => 'menu_order',
            'posts_per_page'     => -1,
             'order'            => 'ASC');
 

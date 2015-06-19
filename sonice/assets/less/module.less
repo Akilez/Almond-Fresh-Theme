@@ -29,7 +29,7 @@
 		height:255px;
 		display:flex;
 		.wrap {
-			margin:auto;
+			margin:auto !important;
 			padding-top: (@grid-gutter-width *2);
 			@media (max-width: @screen-xs-max) {
 				padding-top: @grid-gutter-width;
@@ -86,9 +86,25 @@
 			font-size: 50px;
 			margin: 0;
 		}
+		h1 {
+			margin-bottom: 1em;
+		}
+		h4 {
+			margin: 0px 7%;
+		}
 		p {
-			font-size: 20px;
-			margin: 20px 24% 30px 24%;
+			font-size: 14px;
+			margin: 0px 7% 3px 7%;
+		}
+		.rfbp-text {
+			text-align:left;
+		}
+		.rfbp-post-link-wrap {
+			text-align:right;
+			margin-bottom: 7px;
+		}
+		a {
+			color:#fff;
 		}
 		.btn {
 			background-color: #fff;
@@ -112,15 +128,18 @@
 				font-size: 45px;
 			}
 			p {
-				font-size: 20px;
+				font-size: 14px;
 			}
 		}
 		@media (max-width: @screen-xs) {
 			.title {
 				font-size: 30px;
 			}
+			h4 {
+				font-size:17px;
+			}
 			p {
-				font-size: 17px;
+				font-size: 12px;
 			}
 		}
 	}
